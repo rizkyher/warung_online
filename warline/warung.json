@@ -1,0 +1,27 @@
+{
+    "menu": [
+        {
+            "kategori": "Makanan",
+            "nama": "Indomie Goreng Aceh",
+            "deskripsi": "Indomie goreng rasa mie aceh",
+            "harga": 49500,
+            "gambar": "indomie_goreng-aceh.jpeg"
+        },
+        {
+            "kategori": "Makanan",
+            "nama": "Indomie kari ayam",
+            "deskripsi": "indomie kuah rasa kari ayam enak",
+            "harga": 40000,
+            "gambar": "indomie_matah.jpeg"
+        },
+        {
+            "kategori": "Makanan",
+            "nama": "Indomie Goreng rendang",
+            "deskripsi": "indomie goreng rasa Rendang sapi enak",
+            "harga": 40000,
+            "gambar": "indomie_goreng-rendang.jpeg"
+        }
+      
+        
+    ]
+}
