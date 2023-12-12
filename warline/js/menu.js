@@ -21,6 +21,8 @@ document.addEventListener('alpine:init', () =>{
             $('#chekoutBtn').removeClass('disabled')
             $('#chekoutBtn').attr('href', 'pembayaran.html')
 
+            
+
 
             //jika ga ada
             if(!cartItem) {
@@ -87,28 +89,40 @@ document.addEventListener('alpine:init', () =>{
                 this.items = this.items.filter((item) => item.id !== id);
                 this.quantity--;
                 this.total -= cartItem.price;
-                $('#chekoutBtn').addClass('disabled')
-                $('#chekoutBtn').attr('href', '#')
                 $(`#${id}`).remove()
+                localStorage.setItem("quantity", JSON.stringify(this.quantity))
+                let quantity2 = new Array()
+                quantity2 = JSON.parse(localStorage.getItem("quantity"))?JSON.parse(localStorage.getItem("quantity")):0;
+                if (  quantity2 < 1){
+                    $('#chekoutBtn').addClass('disabled');
+                    $('#chekoutBtn').attr('href', '#')
+
+                }
+
+                // $('#chekoutBtn').attr('href', '#')
                 // localStorage.setItem("pesanan", JSON.stringify(this.items))
                 // localStorage.setItem("total", JSON.stringify(this.total))
                 // localStorage.setItem("quantity", JSON.stringify(this.quantity))
-
+               
             } 
+
             // else {
             //     if (!cartItem){
             //         $('#chekoutBtn').addClass('disabled')
-            //         $('#chekoutBtn').attr('href', '#')
+                    // $('#chekoutBtn').attr('href', '#')
             
             //     } else {
             //         $('#chekoutBtn').removeClass('disabled')
-            //         $('#chekoutBtn').attr('href', 'pembayaran.html')
+                    // $('#chekoutBtn').attr('href', 'pembayaran.html')
                     
             //     }
             // }
             localStorage.setItem("pesanan", JSON.stringify(this.items))
             localStorage.setItem("total", JSON.stringify(this.total))
             localStorage.setItem("quantity", JSON.stringify(this.quantity))
+            
+            
+            
         },
         
         // updateTotal(totals) {
@@ -181,6 +195,24 @@ const rupiah = (number) => {
 
 
 
+
+
+function cek() {
+    const chekoutButton = document.querySelector('.chekoutButton');
+    chekoutButton.disabled = true;
+    let list = new Array();
+    list = JSON.parse(localStorage.getItem("quantity"))?JSON.parse(localStorage.getItem("quantity")):0;
+    if (list !== 0){
+        chekoutButton.disabled = false;
+        chekoutButton.classList.remove('disabled')
+        
+    } else {
+        return false
+    }
+    
+    
+};
+cek()
 
 
 

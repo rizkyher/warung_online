@@ -353,47 +353,51 @@
     <section class="cart-area pt-120 pb-120" x-data>
         <div class="container">
         <div class="row">
-            <div class="col-12">
-                    <div class="table-content table-responsive">
-                        <table class="table" id="cart2">
-                                <thead>
-                                <tr>
-                                    <th class="product-thumbnail">Images</th>
-                                    <th class="cart-product-name">Product</th>
-                                    <th class="product-price">Unit Price</th>
-                                    <th class="product-quantity">Quantity</th>
-                                    <th class="product-subtotal">Total</th>
-                                </tr>
-                                </thead>
-                                <tbody id="cart3">
-                                    <template x-for="(item, index) in $store.cart.items" x-key="index">
-                                        <tr>
-                                            <td class="product-thumbnail"><img  :src="`images/${item.images}`" :alt="item.name" ></td>
-                                            <td class="product-name" x-text="item.name"></td>
-                                            <td class="product-price"><span class="amount" x-text="rupiah(item.price)"></span></td>
-                                            <td class="product-quantity">
-                                                    <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
-                                                    <span x-text="item.quantity"></span>
-                                                    <button id="add" @click="$store.cart.add(item)">&plus;</button>
-                                            </td>
-                                            <td class="product-subtotal"><span class="amount" x-text="rupiah(item.total)"></span></td>
-                                        </tr>
-                                    </template>
-                                </tbody>
-                            </table>
-                    </div>
-                    <div class="row justify-content-end">
-                        <div class="col-md" >
-                                <div class="cart-page-total">
-                                <h2>Cart totals</h2>
-                                <ul class="mb-20">
-                                    <li>Total <span x-text="rupiah($store.cart.total)"></span></li>
-                                </ul>
-                                <a class="chekoutButton disabled" id="chekoutBtn" href="" disabled x-bind:checked="cek()">Proceed to checkout</a>
-                                </div>
+            <!-- <form action="" id="chekoutForm"> -->
+                <div class="col-12">
+                        <div class="table-content table-responsive">
+                            <table class="table" id="cart2">
+                                    <thead>
+                                    <tr>
+                                        <th class="product-thumbnail">Images</th>
+                                        <th class="cart-product-name">Product</th>
+                                        <th class="product-price">Unit Price</th>
+                                        <th class="product-quantity">Quantity</th>
+                                        <th class="product-subtotal">Total</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="cart3">
+                                        <template x-for="(item, index) in $store.cart.items" x-key="index">
+                                            <tr id="cartt">
+                                                <td class="product-thumbnail"><img  :src="`images/${item.images}`" :alt="item.name" ></td>
+                                                <td class="product-name" x-text="item.name"></td>
+                                                <td class="product-price"><span class="amount" x-text="rupiah(item.price)"></span></td>
+                                                <td class="product-quantity">
+                                                        <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+                                                        <span x-text="item.quantity"></span>
+                                                        <button id="add" @click="$store.cart.add(item)">&plus;</button>
+                                                </td>
+                                                <td class="product-subtotal"><span class="amount" x-text="rupiah(item.total)"></span></td>
+                                            </tr>
+                                        </template>
+                                    </tbody>
+                                </table>
                         </div>
-                    </div>
-            </div>
+                        <div class="row justify-content-end">
+                            <div class="col-md" >
+                                    <div class="cart-page-total">
+                                    <h2>Cart totals</h2>
+                                    <ul class="mb-20">
+                                        <li>Total <span x-text="rupiah($store.cart.total)"></span></li>
+                                    </ul>
+                                    <!-- <form action=""> -->
+                                    <a class="chekoutButton disabled" id="chekoutBtn" type="submit">Proceed to checkout</a>
+                                    <!-- </form> -->
+                                    </div>
+                            </div>
+                        </div>
+                </div>
+            <!-- </form> -->
         </div>
         </div>
     </section>
