@@ -1,33 +1,36 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Warung Online</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--alpinejs-->
-        <!-- <script src="//unpkg.com/alpinejs" defer></script> -->
-        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-        <!-- Place favicon.ico in the root directory -->
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-        <!-- CSS here -->
-        <link rel="stylesheet" href="assets/css/preloader.css">
-        <link rel="stylesheet" href="assets/css/bootstrap.css">
-        <link rel="stylesheet" href="assets/css/meanmenu.css">
-        <link rel="stylesheet" href="assets/css/animate.css">
-        <link rel="stylesheet" href="assets/css/owl-carousel.css">
-        <link rel="stylesheet" href="assets/css/swiper-bundle.css">
-        <link rel="stylesheet" href="assets/css/backtotop.css">
-        <link rel="stylesheet" href="assets/css/ui-range-slider.css">
-        <link rel="stylesheet" href="assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="assets/css/nice-select.css">
-        <link rel="stylesheet" href="assets/flaticon/flaticon.css">
-        <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
-        <link rel="stylesheet" href="assets/css/default.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-    <body>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Keranjang Warung online</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+      <!-- Place favicon.ico in the root directory -->
+      <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+      <!-- CSS here -->
+      <link rel="stylesheet" href="assets/css/preloader.css">
+      <link rel="stylesheet" href="assets/css/bootstrap.css">
+      <link rel="stylesheet" href="assets/css/meanmenu.css">
+      <link rel="stylesheet" href="assets/css/animate.css">
+      <link rel="stylesheet" href="assets/css/owl-carousel.css">
+      <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+      <link rel="stylesheet" href="assets/css/backtotop.css">
+      <link rel="stylesheet" href="assets/css/ui-range-slider.css">
+      <link rel="stylesheet" href="assets/css/magnific-popup.css">
+      <link rel="stylesheet" href="assets/css/nice-select.css">
+      <link rel="stylesheet" href="assets/flaticon/flaticon.css">
+      <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
+      <link rel="stylesheet" href="assets/css/default.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+   </head>
+   <body>
+      <!--[if lte IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+      <![endif]-->
+
+
     <!-- preloader start -->
     <div id="loading">
         <div id="loading-center">
@@ -114,16 +117,16 @@
     </div>
     <!-- preloader end -->
 
-    <!-- back to top start -->
-    <div class="progress-wrap">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <!-- back to top start -->
+      <div class="progress-wrap">
+         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
-    </div>
-    <!-- back to top end -->
-    
+         </svg>
+      </div>
+      <!-- back to top end -->
+      
     <!-- header-start -->
-    <header class="header d-blue-bg">
+     <header class="header d-blue-bg">
         <div class="header-top">
             <div class="container">
                 <div class="header-inner">
@@ -136,10 +139,27 @@
                                     </div>
                                     <select>
                                         <option>Indonesia</option>
+                                        <option>English</option>
+                                        <option>Deutsch</option>
+                                        <option>Français</option>
+                                        <option>Espanol</option>
+                                    </select>
+                                </div>
+                                <div class="header__lang border-right">
+                                    <div class="s-name">
+                                        <span>Mata Uang: </span>
+                                    </div>
+                                    <select>
+                                        <option> IDR</option>
+                                        <option> USD</option>
+                                        <option>EUR</option>
+                                        <option>INR</option>
+                                        <option>BDT</option>
+                                        <option>BGD</option>
                                     </select>
                                 </div>
                                 <div class="support d-none d-sm-block">
-                                    <p>Perlu Bantuan? <a href="tel:+6285163554496">+62 851 6355 4496</a></p>
+                                    <p>Need Help? <a href="tel:+6285163554496">+62 851 6355 4496</a></p>
                                 </div>
                             </div>
                         </div>
@@ -147,7 +167,10 @@
                             <div class="header-inner-end text-md-end">
                                 <div class="ovic-menu-wrapper">
                                     <ul>
-                                        <li><a href="about.html">Tentang kami</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="contact.html">Order Tracking</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                        <li><a href="faq.html">FAQs</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -156,71 +179,14 @@
                 </div>
             </div>
         </div>
-        <div class="header-mid" x-data>
-            <div class="container align-items-center">
+        <div class="header-mid">
+            <div class="container">
                 <div class="heade-mid-inner">
-                    <div class="row align-items-center" style="justify-content: space-around !important;">
-                        <div class="col-xl-6 col-lg-5 col-md-4 col-sm-4">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4">
                             <div class="header__info">
                                 <div class="logo">
-                                    <a href="index.html"><h1 style="color: white;">WARUNG ONLINE</h1></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-5 col-md-8 col-sm-8">
-                            <div class="header-action">
-                                <div class="block-cart action">
-                                    <a class="icon-link" href="cart.html">
-                                    <i class="flaticon-shopping-bag"></i>
-                                    <span class="count"x-show="$store.cart.quantity"  x-text="$store.cart.quantity"></span>
-                                    <span class="text">
-                                    <span class="sub">Your Cart:<span x-text="rupiah($store.cart.total)"></span></span>
-                                    </span>
-                                    </a>
-                    <!--cart-->
-                                    <div class="cart">
-                                        <template x-for="(item, index) in $store.cart.items" x-key="index">
-                                            <div class="cart__mini">
-                                                <ul>
-                                                    <li>
-                                                        <div class="cart__title">
-                                                            <h4>Your Cart</h4>
-                                                            <span>(<span x-text="$store.cart.quantity"></span> Item in Cart)</span>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="cart__item d-flex justify-content-between align-items-center">
-                                                            <div class="cart__inner d-flex">
-                                                                <div class="cart__thumb">
-                                                                    <img :src="`images/${item.images}`" :alt="item.name" >
-                                                                </div>
-                                                                <div class="cart__details">
-                                                                    <h3 x-text="item.name"></h3>
-                                                                    <div class="cart__price">
-                                                                        <span x-text="rupiah(item.price)"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="cart__del">
-                                                                <a href="#" @click="$store.cart.remove(item.id)"><i class="fal fa-times"></i></a>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="cart__sub d-flex justify-content-between align-items-center">
-                                                            <h6>Subtotal</h6>
-                                                                <span class="cart__sub-total" x-text="rupiah($store.cart.total)"></span>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <a href="cart.html" class="wc-cart mb-10">View cart</a>
-                                                        <!-- <a href="checkout.html" class="wc-checkout">Checkout</a> -->
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </template>
-                                    </div>
+                                    <a href="index.htm" class="logo-image" style="color: #FFFFFF;font-size: 40px;">Warung Online</a>
                                 </div>
                             </div>
                         </div>
@@ -263,7 +229,7 @@
                             <nav>
                                 <ul>
                                     <li>
-                                        <a href="index.html" class="active">Home </a>
+                                        <a href="shop2.html" class="active">Home </a>
                                     </li>
                                 </ul>
                             </nav>
@@ -273,8 +239,8 @@
                 </div>
             </div>
         </div>
-    </header>
-    <!-- header-end -->
+     </header>
+     <!-- header-end -->
 
     <!-- offcanvas area start -->
     <div class="offcanvas__area">
@@ -304,144 +270,144 @@
         </div>
     </div>
     <!-- offcanvas area end -->      
-    <!-- <div class="body-overlay"></div> -->
+    <div class="body-overlay"></div>
     <!-- offcanvas area end -->
 
     <main>
-        <!-- breadcrumb__area-start -->
-        <section class="breadcrumb__area box-plr-75">
+        <!-- page-banner-area-start -->
+        <div class="page-banner-area page-banner-height-2" data-background="images/6.jpg">
             <div class="container">
                 <div class="row">
-                    <div class="col-xxl-12">
-                        <div class="breadcrumb__wrapper">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Shop</li>
-                                </ol>
-                            </nav>
+                    <div class="col-xl-12">
+                        <div class="page-banner-content text-center">
+                            <h4 class="breadcrumb-title">Keranjang Kamu</h4>
+                            <div class="breadcrumb-two">
+                                <nav>
+                                    <nav class="breadcrumb-trail breadcrumbs">
+                                        <ul class="breadcrumb-menu">
+                                            <li class="breadcrumb-trail">
+                                                <a href="shop2.html"><span>Home</span></a>
+                                            </li>
+                                            <li class="trail-item">
+                                                <span>Keranjang</span>
+                                            </li>
+                                        </ul>
+                                    </nav> 
+                                </nav>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- breadcrumb__area-end -->
+        </div>
+        <!-- page-banner-area-end -->
 
-        <!-- shop-area-start -->
-        <div class="shop-area mb-20" x-data="menu">
+        <!-- cart-area-start -->
+        <section class="cart-area pt-120 pb-120" x-data>
+            <div class="container">
+            <div class="row">
+                <!-- <form action="" id="chekoutForm"> -->
+                    <div class="col-12">
+                            <div class="table-content table-responsive">
+                                <table class="table" id="cart2">
+                                        <thead>
+                                        <tr>
+                                            <th class="product-thumbnail">Images</th>
+                                            <th class="cart-product-name">Product</th>
+                                            <th class="product-price">Unit Price</th>
+                                            <th class="product-quantity">Quantity</th>
+                                            <th class="product-subtotal">Total</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="cart3">
+                                            <template x-for="(item, index) in $store.cart.items" x-key="index">
+                                                <tr id="cartt">
+                                                    <td class="product-thumbnail"><img  :src="`images/${item.images}`" :alt="item.name" ></td>
+                                                    <td class="product-name" x-text="item.name"></td>
+                                                    <td class="product-price"><span class="amount" x-text="rupiah(item.price)"></span></td>
+                                                    <td class="product-quantity">
+                                                            <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+                                                            <span x-text="item.quantity"></span>
+                                                            <button id="add" @click="$store.cart.add(item)">&plus;</button>
+                                                    </td>
+                                                    <td class="product-subtotal"><span class="amount" x-text="rupiah(item.total)"></span></td>
+                                                </tr>
+                                            </template>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div class="row justify-content-end">
+                                <div class="col-md" >
+                                        <div class="cart-page-total">
+                                        <h2>Cart totals</h2>
+                                        <ul class="mb-20">
+                                            <li>Total <span x-text="rupiah($store.cart.total)"></span></li>
+                                        </ul>
+                                        <!-- <form action=""> -->
+                                        <a class="chekoutButton disabled" id="chekoutBtn" type="submit" onclick="hapus()">Proceed to checkout</a>
+                                        <!-- </form> -->
+                                        </div>
+                                </div>
+                            </div>
+                    </div>
+                <!-- </form> -->
+            </div>
+            </div>
+        </section>
+        <!-- cart-area-end -->
+
+        <!-- cta-area-start -->
+        <section class="cta-area d-ldark-bg pt-55 pb-10">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-3 col-lg-4">
-                        <div class="product-widget mb-30">
-                            <h5 class="pt-title">Product categories</h5>
-                            <div class="widget-category-list mt-20">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="cta-item cta-item-d mb-30">
+                            <h5 class="cta-title">Follow Us</h5>
+                            <p>We make consolidating, marketing and tracking your social media website easy.</p>
+                            <div class="cta-social">
+                                <div class="social-icon">
+                                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+                                    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="rss"><i class="fas fa-rss"></i></a>
+                                    <a href="#" class="dribbble"><i class="fab fa-dribbble"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="cta-item mb-30">
+                            <h5 class="cta-title">Sign Up To Newsletter</h5>
+                            <p>Join 60.000+ subscribers and get a new discount coupon  on every Saturday.</p>
+                            <div class="subscribe__form">
                                 <form action="#">
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-13" name="cat-item">
-                                        <label for="cat-item-13">Makanan<span>(3)</span></label>
-                                    </div>
+                                    <input type="email" placeholder="Enter your email here...">
+                                    <button>subscribe</button>
                                 </form>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-9 col-lg-8">
-                        <div class="shop-banner mb-30">
-                            <div class="banner-image">
-                                <img class="banner-l" src="images/6.jpg" height="200" alt="">
-                                <!-- <img class="banner-sm" src="assets/img/banner/sl-banner-sm.png" alt=""> -->
-                                <!-- <div class="banner-content text-center">
-                                    <p class="banner-text mb-30">Hurry Up! <br> Free Shipping All Order Over $99</p>
-                                    <a href="" class="st-btn-d b-radius">Discover now</a>
-                                </div> -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="cta-item mb-30">
+                            <h5 class="cta-title">Download App</h5>
+                            <p>DukaMarket App is now available on App Store & Google Play. Get it now.</p>
+                            <div class="cta-apps">
+                                <div class="apps-store">
+                                    <a href="#"><img src="assets/img/brand/app_ios.png" alt=""></a>
+                                    <a href="#"><img src="assets/img/brand/app_android.png" alt=""></a>
+                                </div>
                             </div>
                         </div>
-                        <!--Product card-->
-                        <div class="tab-content row " id="productGridTabContent" >
-                            <div class="tab-pane fade  show active" id="FourCol" role="tabpanel" aria-labelledby="FourCol-tab"> 
-                                    <div class="tp-wrapper"> 
-                                        <div class="row" id="menu"  x-init="$watch('pesanan', (pitem) => localStorage.setItem('cart', JSON.stringify(pitem)))">
-                                            <template x-for="(item, index) in items" x-key="index" >
-                                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                                    <div class="product__item product__item-d"> 
-                                                        <div class="product__thumb fix"> 
-                                                            <div class="product-image w-img"> 
-                                                                <a href=""><img class="img-fluid" :src="`images/${item.images}`"   :alt="item.name"></a>
-                                                            </div> 
-                                                        </div> 
-                                                        <div class="product__content-3">
-                                                            <h6 x-text="item.name"></h6>
-                                                            <div>
-                                                            </div>
-                                                            <div class="price mb-10">
-                                                                <span x-text="rupiah(item.price)"></span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product__add-cart-s text-center">
-                                                        <button type="button" @click.prevent="$store.cart.add(item)"  class="cart-btn d-flex mb-10 align-items-center justify-content-center w-100">Add to Cart</button>
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            </template>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>   
-        <!-- shop-area-end -->
-        
-        
-        <!--Cart Area-->
-    </main>
-    <!-- <section class="cart-area pt-120 pb-120" x-data>
-        <div class="container">
-        <div class="row">
-             <form action="" id="chekoutForm"> 
-                <div class="col-12">
-                        <div class="table-content table-responsive">
-                            <table class="table" id="cart2">
-                                    <thead>
-                                    <tr>
-                                        <th class="product-thumbnail">Images</th>
-                                        <th class="cart-product-name">Product</th>
-                                        <th class="product-price">Unit Price</th>
-                                        <th class="product-quantity">Quantity</th>
-                                        <th class="product-subtotal">Total</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody id="cart3">
-                                        <template x-for="(item, index) in $store.cart.items" x-key="index">
-                                            <tr id="cartt">
-                                                <td class="product-thumbnail"><img  :src="`images/${item.images}`" :alt="item.name" ></td>
-                                                <td class="product-name" x-text="item.name"></td>
-                                                <td class="product-price"><span class="amount" x-text="rupiah(item.price)"></span></td>
-                                                <td class="product-quantity">
-                                                        <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
-                                                        <span x-text="item.quantity"></span>
-                                                        <button id="add" @click="$store.cart.add(item)">&plus;</button>
-                                                </td>
-                                                <td class="product-subtotal"><span class="amount" x-text="rupiah(item.total)"></span></td>
-                                            </tr>
-                                        </template>
-                                    </tbody>
-                                </table>
-                        </div>
-                        <div class="row justify-content-end">
-                            <div class="col-md" >
-                                    <div class="cart-page-total">
-                                    <h2>Cart totals</h2>
-                                    <ul class="mb-20">
-                                        <li>Total <span x-text="rupiah($store.cart.total)"></span></li>
-                                    </ul>
-                                    <form action=""> 
-                                    <a class="chekoutButton disabled" id="chekoutBtn" type="submit">Proceed to checkout</a>
-                                    </form> 
-                                    </div>
-                            </div>
-                        </div>
+                    </div>
                 </div>
-            </form> 
-        </div>
-        </div>
-    </section> -->
+            </div>
+
+        </section>
+        <!-- cta-area-end -->
+
+    </main>
+
     <!-- footer-start -->
     <footer>
         <div class="fotter-area d-dark-bg">
@@ -535,7 +501,7 @@
                                     </div><div class="col-xl-5 col-lg-6 col-md-6 col-sm-6">
                                         <div class="footer__widget">
                                             <div class="footer__widget-title mb-20">
-                                                <h4>Tentang Toko</h4>
+                                                <h4>About The Store</h4>
                                             </div>
                                             <div class="footer__widget-content">
                                                 <p class="footer-text mb-35">Our mission statement is to provide the absolute best customer experience available in the Electronic industry without exception.</p>
@@ -544,14 +510,14 @@
                                                         <i class="fal fa-headset"></i>
                                                     </div>
                                                     <div class="text">
-                                                        <h4>Ada Pertanyaan? Telpon kami 24/7!</h4>
-                                                        <span><a href="tel:62-851-6355-4496">(+62) 851 6355 4496</a></span>
+                                                        <h4>Got Question? Call us 24/7!</h4>
+                                                        <span><a href="tel:100-123-456-7890">(+100) 123 456 7890</a></span>
                                                     </div>
                                                 </div>
                                                 <div class="footer__info">
                                                     <ul>
                                                         <li>
-                                                            <span>Add:  <a target="_blank" href="https://goo.gl/maps/c82DDZ8ALvL878Bv8">Jl. karasak lama, Bandung</a></span>
+                                                            <span>Add:  <a target="_blank" href="https://goo.gl/maps/c82DDZ8ALvL878Bv8">Walls Street 68, Mahattan, New York, USA</a></span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -596,7 +562,7 @@
                                     <a href="contact.html"><img src="assets/img/payment/payment.png" alt=""></a>
                                 </div>
                                 <div class="copy-right-area text-center">
-                                    <p>Copyright © <span>Warung Online.</span> All Rights Reserved. Powered by <a href="#"><span class="main-color">Theme_Pure.</span></a></p>
+                                    <p>Copyright © <span>DukaMarket.</span> All Rights Reserved. Powered by <a href="#"><span class="main-color">Theme_Pure.</span></a></p>
                                 </div>
                             </div>
                         </div>
@@ -608,27 +574,27 @@
     <!-- footer-end -->
 
       <!-- JS here -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-        <script src="js/menu.js"></script>
-        <script src="assets/js/vendor/jquery.js"></script>
-        <script src="assets/js/vendor/waypoints.js"></script>
-        <script src="assets/js/bootstrap-bundle.js"></script>
-        <script src="assets/js/meanmenu.js"></script>
-        <script src="assets/js/swiper-bundle.js"></script>
-        <script src="assets/js/tweenmax.js"></script>
-        <script src="assets/js/owl-carousel.js"></script>
-        <script src="assets/js/magnific-popup.js"></script>
-        <script src="assets/js/parallax.js"></script>
-        <script src="assets/js/backtotop.js"></script>
-        <script src="assets/js/nice-select.js"></script>
-        <script src="assets/js/countdown.min.js"></script>
-        <script src="assets/js/counterup.js"></script>
-        <script src="assets/js/ui-slider-range.js"></script>
-        <script src="assets/js/wow.js"></script>
-        <script src="assets/js/isotope-pkgd.js"></script>
-        <script src="assets/js/imagesloaded-pkgd.js"></script>
-        <script src="assets/js/ajax-form.js"></script>
-        <script src="assets/js/main.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+      <script src="js/menu.js"></script>
+      <script src="assets/js/vendor/jquery.js"></script>
+      <script src="assets/js/vendor/waypoints.js"></script>
+      <script src="assets/js/bootstrap-bundle.js"></script>
+      <script src="assets/js/meanmenu.js"></script>
+      <script src="assets/js/swiper-bundle.js"></script>
+      <script src="assets/js/tweenmax.js"></script>
+      <script src="assets/js/owl-carousel.js"></script>
+      <script src="assets/js/magnific-popup.js"></script>
+      <script src="assets/js/parallax.js"></script>
+      <script src="assets/js/backtotop.js"></script>
+      <script src="assets/js/nice-select.js"></script>
+      <script src="assets/js/countdown.min.js"></script>
+      <script src="assets/js/counterup.js"></script>
+      <script src="assets/js/ui-slider-range.js"></script>
+      <script src="assets/js/wow.js"></script>
+      <script src="assets/js/isotope-pkgd.js"></script>
+      <script src="assets/js/imagesloaded-pkgd.js"></script>
+      <script src="assets/js/ajax-form.js"></script>
+      <script src="assets/js/main.js"></script>
    </body>
 </html>

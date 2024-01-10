@@ -1,0 +1,374 @@
+{
+  "sections": {
+    "main": {
+      "type": "slider",
+      "blocks": {
+        "f68ffe7c-7255-4ef8-8bfb-4a232495a3e0": {
+          "type": "slide",
+          "settings": {
+            "slider_bg_img": "shopify:\/\/shop_images\/s1.jpg",
+            "slider_img": "shopify:\/\/shop_images\/s1_1.png",
+            "animation_style": "animation_style_1",
+            "text_style": "text_style_left",
+            "slider_subtitle": "Best Products",
+            "slider_title": "Mount Carved 2200XD",
+            "slider_description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature.",
+            "slider_button": "Shop Now",
+            "slider_button_url": "shopify:\/\/collections\/all",
+            "subtitle_color": "#222222",
+            "title_color": "#222222",
+            "description_color": "#222222",
+            "button_text_color": "#ffffff",
+            "button_bg_color": "#0438a1",
+            "button_text_hover_color": "#ffffff",
+            "button_bg_hover_color": "#027ad1"
+          }
+        },
+        "a46e0f00-6639-4809-af31-55026ed706d4": {
+          "type": "slide",
+          "settings": {
+            "slider_bg_img": "shopify:\/\/shop_images\/s1.jpg",
+            "slider_img": "shopify:\/\/shop_images\/s1_2.png",
+            "animation_style": "animation_style_1",
+            "text_style": "text_style_left",
+            "slider_subtitle": "Best Products",
+            "slider_title": "Mount Carved 2200XD",
+            "slider_description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature.",
+            "slider_button": "Shop Now",
+            "slider_button_url": "shopify:\/\/collections\/all",
+            "subtitle_color": "#222222",
+            "title_color": "#222222",
+            "description_color": "#222222",
+            "button_text_color": "#ffffff",
+            "button_bg_color": "#0438a1",
+            "button_text_hover_color": "#ffffff",
+            "button_bg_hover_color": "#027ad1"
+          }
+        }
+      },
+      "block_order": [
+        "f68ffe7c-7255-4ef8-8bfb-4a232495a3e0",
+        "a46e0f00-6639-4809-af31-55026ed706d4"
+      ],
+      "settings": {
+        "arrow_icon_color": "#0438a1",
+        "arrow_bg_color": "#ffffff",
+        "arrow_icon_hover_color": "#ffffff",
+        "arrow_bg_hover_color": "#0438a1",
+        "dot_color": "#dcdcdc",
+        "dot_active_color": "#0438a1"
+      }
+    },
+    "1631534411b078bdde": {
+      "type": "tab-with-product-2",
+      "blocks": {
+        "1631534411b078bdde-0": {
+          "type": "tab_product",
+          "settings": {
+            "collection": "featured"
+          }
+        },
+        "1631534411b078bdde-1": {
+          "type": "tab_product",
+          "settings": {
+            "collection": "new-product"
+          }
+        },
+        "1631534411b078bdde-2": {
+          "type": "tab_product",
+          "settings": {
+            "collection": "best-deal"
+          }
+        },
+        "1631534411b078bdde-3": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 80,
+            "section_padding_bottom": 80,
+            "section_padding_top_md": 80,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 60,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "1631534411b078bdde-0",
+        "1631534411b078bdde-1",
+        "1631534411b078bdde-2",
+        "1631534411b078bdde-3"
+      ],
+      "settings": {
+        "section_title": "Laptops & Computers",
+        "product_coloum": "4",
+        "product_limit_handle": "9",
+        "section_title_color": "#222222",
+        "title_color": "#222222",
+        "title_hover_color": "#0438a1",
+        "title_active_color": "#0438a1"
+      }
+    },
+    "163153447223688331": {
+      "type": "banner-area",
+      "blocks": {
+        "163153447223688331-0": {
+          "type": "banner",
+          "settings": {
+            "banner_coloum": "12",
+            "banner_img": "shopify:\/\/shop_images\/b4.jpg",
+            "banner_img_url": "shopify:\/\/collections\/all"
+          }
+        },
+        "163153447223688331-2": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 50,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 50,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 30
+          }
+        }
+      },
+      "block_order": [
+        "163153447223688331-0",
+        "163153447223688331-2"
+      ],
+      "settings": {
+      }
+    },
+    "16316003281a398127": {
+      "type": "business-edition-watch",
+      "blocks": {
+        "16316003281a398127-0": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 80,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "16316003281a398127-0"
+      ],
+      "settings": {
+        "bg_color": "#f7f8f9",
+        "collection": "watch",
+        "text_style": "text_style_center",
+        "product_thumb_image": "3",
+        "title_color": "#222",
+        "description_color": "#000",
+        "counter_number_color": "#333",
+        "counter_number_bg_color": "#fff",
+        "counter_number_box_shadow_color": "#dcddde",
+        "counter_text_color": "#0438a1",
+        "new_price_color": "#0438a1",
+        "new_old_color": "#000",
+        "button_text_color": "#000",
+        "button_bg_color": "#fff",
+        "button_border_color": "#333",
+        "button_text_hover_color": "#fff",
+        "button_bg_hover_color": "#0438a1",
+        "button_border_hover_color": "#0438a1"
+      }
+    },
+    "1631534362f427a64e": {
+      "type": "banner-area",
+      "blocks": {
+        "1631534362f427a64e-0": {
+          "type": "banner",
+          "settings": {
+            "banner_coloum": "6",
+            "banner_img": "shopify:\/\/shop_images\/b2.jpg",
+            "banner_img_url": "shopify:\/\/collections\/all"
+          }
+        },
+        "1631534362f427a64e-1": {
+          "type": "banner",
+          "settings": {
+            "banner_coloum": "6",
+            "banner_img": "shopify:\/\/shop_images\/b3.jpg",
+            "banner_img_url": "shopify:\/\/collections\/all"
+          }
+        },
+        "1631534362f427a64e-2": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 50,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 50,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 30
+          }
+        }
+      },
+      "block_order": [
+        "1631534362f427a64e-0",
+        "1631534362f427a64e-1",
+        "1631534362f427a64e-2"
+      ],
+      "settings": {
+      }
+    },
+    "1631534509e52e174c": {
+      "type": "product-with-banner",
+      "blocks": {
+        "1631534509e52e174c-2": {
+          "type": "product",
+          "settings": {
+            "product_coloum": "4",
+            "section_title": "On Sale",
+            "collection": "featured",
+            "products_per_col": "2",
+            "section_title_color": "#222222"
+          }
+        },
+        "d5aa507f-656f-4c83-b060-8bd82c2d2ea1": {
+          "type": "product",
+          "settings": {
+            "product_coloum": "4",
+            "section_title": "Best Deal",
+            "collection": "best-deal",
+            "products_per_col": "2",
+            "section_title_color": "#222"
+          }
+        },
+        "d493df11-eb51-466b-955a-e4a6f5e3c9be": {
+          "type": "product",
+          "settings": {
+            "product_coloum": "4",
+            "section_title": "Featured",
+            "collection": "featured",
+            "products_per_col": "2",
+            "section_title_color": "#222"
+          }
+        },
+        "1631534509e52e174c-3": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 50,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 50,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 30
+          }
+        }
+      },
+      "block_order": [
+        "1631534509e52e174c-2",
+        "d5aa507f-656f-4c83-b060-8bd82c2d2ea1",
+        "d493df11-eb51-466b-955a-e4a6f5e3c9be",
+        "1631534509e52e174c-3"
+      ],
+      "settings": {
+        "product_coloum": "1"
+      }
+    },
+    "1631534148e9e9cfce": {
+      "type": "hot-deal-product",
+      "disabled": true,
+      "blocks": {
+        "1631534148e9e9cfce-0": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 80,
+            "section_padding_bottom": 50,
+            "section_padding_top_md": 80,
+            "section_padding_bottom_md": 50,
+            "section_padding_top_xs": 60,
+            "section_padding_bottom_xs": 30
+          }
+        }
+      },
+      "block_order": [
+        "1631534148e9e9cfce-0"
+      ],
+      "settings": {
+        "sidebar_handle": "left_banner_handle",
+        "bg_img": "shopify:\/\/shop_images\/b1_1.jpg",
+        "text_style": "text_style_left",
+        "banner_subtitle": "Hot Deal",
+        "banner_title": "Kemioo DX24 Headphone",
+        "banner_description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature",
+        "text_style_2": "text_style_center_2",
+        "coundown_number": "2025\/12\/1",
+        "banner_img": "shopify:\/\/shop_images\/b1_2.png",
+        "collection": "best-deal",
+        "product_coloum": "1",
+        "subtitle_color": "#222222",
+        "title_color": "#222222",
+        "description_color": "#222222",
+        "counter_number_color": "#222222",
+        "counter_text_color": "#222222"
+      }
+    },
+    "163153428287f898ba": {
+      "type": "tab-with-product",
+      "disabled": true,
+      "blocks": {
+        "163153428287f898ba-0": {
+          "type": "tab_product",
+          "settings": {
+            "collection": "new-product"
+          }
+        },
+        "163153428287f898ba-1": {
+          "type": "tab_product",
+          "settings": {
+            "collection": "featured"
+          }
+        },
+        "163153428287f898ba-2": {
+          "type": "tab_product",
+          "settings": {
+            "collection": "best-deal"
+          }
+        },
+        "163153428287f898ba-3": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 80,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "163153428287f898ba-0",
+        "163153428287f898ba-1",
+        "163153428287f898ba-2",
+        "163153428287f898ba-3"
+      ],
+      "settings": {
+        "product_coloum": "4",
+        "tab_border_color": "#e5e5e5",
+        "title_color": "#454545",
+        "title_bg_color": "#ffffff",
+        "title_border_color": "#ffffff",
+        "title_active_color": "#454545",
+        "title_bg_active_color": "#ffffff",
+        "title_border_active_color": "#e5e5e5"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1631534411b078bdde",
+    "163153447223688331",
+    "16316003281a398127",
+    "1631534362f427a64e",
+    "1631534509e52e174c",
+    "1631534148e9e9cfce",
+    "163153428287f898ba"
+  ]
+}

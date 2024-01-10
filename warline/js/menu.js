@@ -15,6 +15,7 @@ document.addEventListener('alpine:init', () =>{
         items: JSON.parse(localStorage.getItem("pesanan"))?JSON.parse(localStorage.getItem("pesanan")):[],
         total: JSON.parse(localStorage.getItem("total"))?JSON.parse(localStorage.getItem("total")):0,
         quantity: JSON.parse(localStorage.getItem("quantity"))?JSON.parse(localStorage.getItem("quantity")):0,
+        orderan: JSON.parse(localStorage.getItem("orderan"))?JSON.parse(localStorage.getItem("orderan")):[],
         add(newItem) {
             //cek apakah itemnya ada di cart atau kosong
             const cartItem = this.items.find((item) => item.id === newItem.id);
@@ -29,11 +30,9 @@ document.addEventListener('alpine:init', () =>{
                 this.items.push({...newItem, quantity: 1, total: newItem.price})
                 this.quantity++;
                 this.total += newItem.price;
-               
-                
             } else {
 
-                //jika ada cek apakah itemnya sama atau beda dengan di cart
+                //jika ada, cek apakah itemnya sama atau beda dengan di cart
                 this.items = this.items.map((item) => {
                     // jika beda
                     if(item.id !== newItem.id){
@@ -47,8 +46,6 @@ document.addEventListener('alpine:init', () =>{
                         // localStorage.setItem("pesanan", JSON.stringify(this.items))
                         // localStorage.setItem("total", JSON.stringify(this.total))
                         // localStorage.setItem("quantity", JSON.stringify(this.quantity))
-                       
-
                         return item
                     }
                 })
@@ -56,20 +53,19 @@ document.addEventListener('alpine:init', () =>{
             localStorage.setItem("pesanan", JSON.stringify(this.items))
             localStorage.setItem("total", JSON.stringify(this.total))
             localStorage.setItem("quantity", JSON.stringify(this.quantity))
-           
         },
-
+        /**
+         * fungsi untuk meremove item di cart
+         * @param {*} id id cart 
+         */
         remove(id) {
             const cartItem = this.items.find((item) => item.id === id);
             // alert(cartItem.quantity)
             // jika lebih dari 1
             if(cartItem.quantity > 1) {
-        
                 // cek 1 1
-
                 this.items = this.items.map((item) => {
-                    // jika bukan barang yang diklik
-
+                    // jika bukan barang yang diklik 
                     if(item.id !== id) {
                         return item
                     } else {
@@ -124,6 +120,10 @@ document.addEventListener('alpine:init', () =>{
             
             
         },
+
+        order(item) {
+
+        }
         
         // updateTotal(totals) {
         //     const totalItem = JSON.parse(localStorage.getItem("pesanan"))?JSON.parse(localStorage.getItem("pesanan")):[];
@@ -148,37 +148,17 @@ document.addEventListener('alpine:init', () =>{
                 
         // },
         
-       
-    });
-})
+        
+    });  
+    
+    // Alpine.pesanan('pesan', {
+    //     orderan: JSON.parse(localStorage.getItem("orderan"))?JSON.parse(localStorage.getItem("orderan")):[],
+    //     order(item){
+
+    //     }
+    // })
+})    
 ;
-
-// function cek() {
-//     let items = JSON.parse(localStorage.getItem("pesanan"))?JSON.parse(localStorage.getItem("pesanan")):[]
-//     $("td.profuct-quantity").find("span")
-   
-// };
-
-
-
-
-// const chekoutButton = document.querySelector('.chekoutButton');
-// chekoutButton.disabled = true;
-
-// //chekout 
-// const chek = document.querySelector('#');
-
-// chek.addEventListener('keyup', function() {
-//     const total = JSON.parse(localStorage.getItem("total"))?JSON.parse(localStorage.getItem("total")):0
-//     if ( total !== 0) {
-//         chekoutButton.classList.remove('disabled')
-//     } else {
-//         return false
-//     };
-//     chekoutButton.disabled = false;
-//     chekoutButton.classList.remove('disabled');
-
-// })
 
 // koversi rupiah
 const rupiah = (number) => {
@@ -192,11 +172,6 @@ const rupiah = (number) => {
     }).format(number);
 };
 
-
-
-
-
-
 function cek() {
     const chekoutButton = document.querySelector('.chekoutButton');
     chekoutButton.disabled = true;
@@ -205,14 +180,63 @@ function cek() {
     if (list !== 0){
         chekoutButton.disabled = false;
         chekoutButton.classList.remove('disabled')
-        
+        $('#chekoutBtn').attr('href', 'pembayaran.html')
     } else {
         return false
     }
     
     
 };
+
+function hapus() {
+    let pesanan = JSON.parse(localStorage.getItem("pesanan"))?JSON.parse(localStorage.getItem("pesanan")):[];
+    let total = JSON.parse(localStorage.getItem("total"))?JSON.parse(localStorage.getItem("total")):0;
+    let quantity = JSON.parse(localStorage.getItem("quantity"))?JSON.parse(localStorage.getItem("quantity")):0;
+    let orderan = JSON.parse(localStorage.getItem("orderan"))?JSON.parse(localStorage.getItem("orderan")):[];
+
+    if (orderan.length === 0) { 
+        // alert('asasas')
+        // orderan.push(...orderan, pesanan);
+        // orderan = localStorage.setItem("orderan",JSON.stringify(orderan));
+        if (pesanan && total && quantity) {
+            localStorage.removeItem("pesanan", JSON.stringify(pesanan))
+            localStorage.removeItem("total", JSON.stringify(total))
+            localStorage.removeItem("quantity", JSON.stringify(quantity))
+        }}
+
+}
+// orderan = localStorage.setItem("orderan",JSON.stringify(pesanan,total,quantity));
+
+
+
 cek()
+
+// function cek() {
+    //     let items = JSON.parse(localStorage.getItem("pesanan"))?JSON.parse(localStorage.getItem("pesanan")):[]    
+    //     $("td.profuct-quantity").find("span")
+    
+    // };
+
+
+
+
+// const chekoutButton = document.querySelector('.chekoutButton');
+// chekoutButton.disabled = true;
+
+// //chekout 
+// const chek = document.querySelector('#');
+
+// chek.addEventListener('keyup', function() {
+//     const total = JSON.parse(localStorage.getItem("total"))?JSON.parse(localStorage.getItem("total")):0    
+//     if ( total !== 0) {
+//         chekoutButton.classList.remove('disabled')    
+//     } else {
+//         return false    
+//     };
+//     chekoutButton.disabled = false;
+//     chekoutButton.classList.remove('disabled');
+
+// })
 
 
 

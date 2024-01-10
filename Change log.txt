@@ -1,0 +1,92 @@
+
+
+Date: 22 November 2021
+Version: 2.0.3
+=========================== 
+Added: Storefront filtering (Updated & Powerful filter)
+
+Date: 14 September 2021
+Version: 2.0.2
+===========================
+Migrated to Shopify Online Store 2.0
+   - All sections are supported on every page 
+   - Drag & Drop on every page
+   - You can add or remove any section as per your requirement
+   - You can create any page using the ponno default sections (no page builder required)
+Updated: Product page for Online Store 2.0
+   - Drag and drop supported all elements of the product page
+   - FAQ/Accordion added on the product page
+Added: Product Unit price (For Germany and Japan Seller)
+Fixed: Collection Sidebar URL filter issue
+   - You can add size and color filters for every single collection
+
+
+Date: 23 June 2021
+Version: 2.0.1
+=========================== 
+Fixed: Currency Issue. 
+Updated: jQuery Version.
+
+
+Date: 27 January 2021
+Version: 2.0.0
+=========================== 
+Updated: Instagram updated
+Updated: Presets
+Fixed:   Css issue.
+
+
+Date: 09 January 2021
+Version: 1.0.10
+=========================== 
+Added: Full-width video banner
+Added: Full-width banner
+Updated: Wishlit updated
+Updated: Presets
+
+
+Date:    03-11-2020
+Version: 1.0.9
+===================
+Modified:  Cart page design for mobile.
+
+
+Date:    26-09-2020
+Version: 1.0.8
+===================
+Fixed:    1. Css issue.
+    	  2. Instagram issue.
+
+
+Date:    30-04-2020
+Version: 1.0.7
+===================
+Added: 	1. Some featured.
+	2. Section add.
+Fixed:  1. Stickey header issue. 
+	2. Color issue.
+	3. Responsive issue.
+
+
+Date:    09-03-2020
+Version: 1.0.6
+===================
+Added: 	1. Product variant select option.
+	2. Dynamic checkout buttons.
+
+
+Date:    24-11-2019
+Version: 1.0.5
+===================
+Added: 	1. Two new home version.
+
+
+Date:    23-06-2019
+Version: 1.0.4
+===================
+Added: 	1. Shopify newsletter form.
+	2. Unlimited color option.
+	3. Some feature included.
+
+
+
