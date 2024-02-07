@@ -196,8 +196,15 @@
                                                                 </div>
                                                                 <div class="cart__details">
                                                                     <h3 x-text="item.name"></h3>
+                                                                    <div>
+                                                                        <h2 style="font-size: 1.5rem;"> 
+                                                                            <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+                                                                            <span x-text="item.quantity"></span>
+                                                                            <button id="add" @click="$store.cart.add(item)">&plus;</button>
+                                                                        </h2>
+                                                                    </div>
                                                                     <div class="cart__price">
-                                                                        <span x-text="rupiah(item.price)"></span>
+                                                                        <span x-text="rupiah(item.total)"></span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -248,6 +255,9 @@
                                                     </li>
                                                 </ul>
                                             </li>
+                                            <li>
+                                                <a href="archive.html">Archive</a>
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -264,6 +274,9 @@
                                 <ul>
                                     <li>
                                         <a href="index.html" class="active">Home </a>
+                                    </li>
+                                    <li>
+                                        <a href="archive.html">Archive</a>
                                     </li>
                                 </ul>
                             </nav>

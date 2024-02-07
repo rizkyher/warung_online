@@ -3,7 +3,7 @@
    <head>
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>Keranjang Warung online</title>
+      <title>Chekout</title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -139,7 +139,6 @@
                                     </div>
                                     <select>
                                         <option>Indonesia</option>
-                                        <option>English</option>
                                         <option>Deutsch</option>
                                         <option>Français</option>
                                         <option>Espanol</option>
@@ -150,8 +149,7 @@
                                         <span>Mata Uang: </span>
                                     </div>
                                     <select>
-                                        <option> IDR</option>
-                                        <option> USD</option>
+                                        <option>IDR</option>
                                         <option>EUR</option>
                                         <option>INR</option>
                                         <option>BDT</option>
@@ -159,19 +157,7 @@
                                     </select>
                                 </div>
                                 <div class="support d-none d-sm-block">
-                                    <p>Need Help? <a href="tel:+6285163554496">+62 851 6355 4496</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-5 d-none d-lg-block">
-                            <div class="header-inner-end text-md-end">
-                                <div class="ovic-menu-wrapper">
-                                    <ul>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="contact.html">Order Tracking</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
-                                        <li><a href="faq.html">FAQs</a></li>
-                                    </ul>
+                                    <p>Perlu Bantuan? <a href="tel:+85163554496">+851 6355 4496</a></p>
                                 </div>
                             </div>
                         </div>
@@ -179,14 +165,78 @@
                 </div>
             </div>
         </div>
-        <div class="header-mid">
+        <div class="header-mid" x-data>
             <div class="container">
                 <div class="heade-mid-inner">
                     <div class="row align-items-center">
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4">
+                        <div class="col-xl-5 col-lg-4 col-md-4 col-sm-4">
                             <div class="header__info">
                                 <div class="logo">
-                                    <a href="index.htm" class="logo-image" style="color: #FFFFFF;font-size: 40px;">Warung Online</a>
+                                    <a href="shop2.html" class="logo-image"><h1 style="color: #FFFFFF;width: 100%;">Warung Online</h1></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-8 col-sm-8">
+                            <div class="header-action">
+                                <div class="block-cart action">
+                                    <a class="icon-link" href="cart.html">
+                                    <i class="flaticon-shopping-bag"></i>
+                                    <span class="count"x-show="$store.cart.quantity"  x-text="$store.cart.quantity"></span>
+                                    <span class="text">
+                                    <span class="sub">Your Cart:<span x-text="rupiah($store.cart.total)"></span></span>
+                                    </span>
+                                    </a>
+                    <!--cart-->
+                                    <div class="cart">
+                                        <template x-for="(item, index) in $store.cart.items" x-key="index">
+                                            <div class="cart__mini">
+                                                <ul>
+                                                    <li>
+                                                        <div class="cart__title">
+                                                            <h4>Your Cart</h4>
+                                                            <span>(<span x-text="$store.cart.quantity"></span> Item in Cart)</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="cart__item d-flex justify-content-between align-items-center">
+                                                            <div class="cart__inner d-flex">
+                                                                <div class="cart__thumb">
+                                                                    <img :src="`images/${item.images}`" :alt="item.name" >
+                                                                </div>
+                                                                <div class="cart__details">
+                                                                    <h3 x-text="item.name"></h3>
+                                                                    <div>
+                                                                        <h2 style="font-size: 1.5rem;"> 
+                                                                            <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+                                                                            <span x-text="item.quantity"></span>
+                                                                            <button id="add" @click="$store.cart.add(item)">&plus;</button>
+                                                                        </h2>
+                                                                    </div>
+                                                                    <div class="cart__price">
+                                                                        <span x-text="rupiah(item.total)"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cart__del">
+                                                                <a href="#" @click="$store.cart.remove(item.id)"><i class="fal fa-times"></i></a>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="cart__sub d-flex justify-content-between align-items-center">
+                                                            <h6>Subtotal</h6>
+                                                                <span class="cart__sub-total" x-text="rupiah($store.cart.total)"></span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <a href="cart.html" class="wc-cart mb-10">View cart</a>
+                                                        <!-- <a href="checkout.html" class="wc-checkout">Checkout</a> -->
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </template>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -205,19 +255,16 @@
                                     <nav id="mobile-menu" style="display: block;">
                                         <ul>
                                             <li>
-                                                <a href="shop2.html">All Categories <i class="far fa-angle-down"></i></a>
+                                                <a href="shop2.html">Semua Kategori <i class="far fa-angle-down"></i></a>
                                                 <ul class="mega-menu">
-                                                    <li><a href="shop2.html">Shop Pages</a>
+                                                    <li><a href="shop2.html">Halaman Belanja</a>
                                                         <ul class="mega-item">
-                                                            <li><a href="shop2.html">Makanan</a></li>
+                                                            <li><a href="shop2.html">Shop</a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li>
-                                                <a href="archive.html">Archive</a>
-                                            </li>
-                                        </ul>
+                                            
                                     </nav>
                                 </div>
                             </div>
@@ -232,15 +279,17 @@
                             <nav>
                                 <ul>
                                     <li>
-                                        <a href="shop2.html" class="active">Home </a>
-                                    </li>
-                                    <li>
-                                        <a href="archive.html">Archive</a>
+                                        <a href="shop2.html">Home</a>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
                       </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-9">
+                        <div class="shopeing-text text-sm-end">
+                            <p>YUK Ngaborong ada diskon loh!</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -281,24 +330,24 @@
 
     <main>
         <!-- page-banner-area-start -->
-        <div class="page-banner-area page-banner-height-2" data-background="images/6.jpg">
+        <div class="page-banner-area page-banner-height-2" data-background="assets/img/banner/page-banner-4.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="page-banner-content text-center">
-                            <h4 class="breadcrumb-title">Keranjang Kamu</h4>
+                            <h4 class="breadcrumb-title">Checkout</h4>
                             <div class="breadcrumb-two">
                                 <nav>
-                                    <nav class="breadcrumb-trail breadcrumbs">
-                                        <ul class="breadcrumb-menu">
-                                            <li class="breadcrumb-trail">
-                                                <a href="shop2.html"><span>Home</span></a>
-                                            </li>
-                                            <li class="trail-item">
-                                                <span>Keranjang</span>
-                                            </li>
-                                        </ul>
-                                    </nav> 
+                                   <nav class="breadcrumb-trail breadcrumbs">
+                                      <ul class="breadcrumb-menu">
+                                         <li class="breadcrumb-trail">
+                                            <a href="shop2.html"><span>Home</span></a>
+                                         </li>
+                                         <li class="trail-item">
+                                            <span>Checkout</span>
+                                         </li>
+                                      </ul>
+                                   </nav> 
                                 </nav>
                             </div>
                         </div>
@@ -308,59 +357,152 @@
         </div>
         <!-- page-banner-area-end -->
 
-        <!-- cart-area-start -->
-        <section class="cart-area pt-120 pb-120" x-data>
+        <!-- coupon-area-start -->
+        <section class="coupon-area pt-120 pb-30">
             <div class="container">
-            <div class="row">
-                <!-- <form action="" id="chekoutForm"> -->
-                    <div class="col-12">
-                            <div class="table-content table-responsive">
-                                <table class="table" id="cart2">
+            <div class="col-md-6">
+                <div class="coupon-accordion">
+                        <!-- ACCORDION START -->
+                        <h3>Punya Kupon? <span id="showcoupon">Klik untuk memasukan kupon</span></h3>
+                        <div id="checkout_coupon" class="coupon-checkout-content">
+                        <div class="coupon-info">
+                            <form action="#">
+                                    <p class="checkout-coupon">
+                                    <input type="text" placeholder="Coupon Code">
+                                    <button class="tp-btn-h1" type="submit">pakai kupon</button>
+                                    </p>
+                            </form>
+                        </div>
+                        </div>
+                        <!-- ACCORDION END -->
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+        <!-- coupon-area-end -->
+
+        <!-- checkout-area-start -->
+        <section class="checkout-area pb-85">
+            <div class="container">
+                <form action="#">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="checkbox-form">
+                                <h3>Billing Details</h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="checkout-form-list">
+                                            <label>Your Name <span class="required">*</span></label>
+                                            <input type="text" id="username" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="checkout-form-list">
+                                            <label>Address <span class="required">*</span></label>
+                                            <input type="text" id="address" placeholder="Street address">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="checkout-form-list">
+                                            <label>Phone <span class="required">*</span></label>
+                                            <input type="text" id="number" placeholder="Nomber">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" x-data="">
+                            <div class="your-order mb-30 ">
+                                <h3>Pesananmu</h3>
+                                <div class="your-order-table table-responsive">
+                                    <table>
                                         <thead>
-                                        <tr>
-                                            <th class="product-thumbnail">Images</th>
-                                            <th class="cart-product-name">Product</th>
-                                            <th class="product-price">Unit Price</th>
-                                            <th class="product-quantity">Quantity</th>
-                                            <th class="product-subtotal">Total</th>
-                                        </tr>
+                                            <tr>
+                                                <th class="product-name">Product</th>
+                                                <th class="product-name">Jumlah</th>
+                                                <th class="product-total">Total</th>
+                                            </tr>
                                         </thead>
-                                        <tbody id="cart3">
+                                        <tbody>
                                             <template x-for="(item, index) in $store.cart.items" x-key="index">
-                                                <tr id="cartt">
-                                                    <td class="product-thumbnail"><img  :src="`images/${item.images}`" :alt="item.name" ></td>
-                                                    <td class="product-name" x-text="item.name"></td>
-                                                    <td class="product-price"><span class="amount" x-text="rupiah(item.price)"></span></td>
-                                                    <td class="product-quantity">
-                                                            <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
-                                                            <span x-text="item.quantity"></span>
-                                                            <button id="add" @click="$store.cart.add(item)">&plus;</button>
+                                                <tr class="cart_item">
+                                                    <td class="product-name" id="produk" x-text="item.name">
+                                                        <td class="product-quantity" x-text="item.quantity"></td>
                                                     </td>
-                                                    <td class="product-subtotal"><span class="amount" x-text="rupiah(item.total)"></span></td>
+                                                    <td class="product-total">
+                                                        <span class="amount"  x-text="rupiah(item.total)"></span>
+                                                    </td>
                                                 </tr>
                                             </template>
                                         </tbody>
+                                        <tfoot>
+                                            <tr class="cart-subtotal">
+                                                <th>Cart Subtotal</th>
+                                                <td class="product-quantity" x-text="$store.cart.quantity"td>
+                                                <td><span class="amount" x-text="rupiah($store.cart.total)"></span></td>
+                                            </tr>
+                                            <tr class="order-total">
+                                                <th>Order Total</th>
+                                                <td class="product-quantity" x-text="$store.cart.quantity"></td>
+                                                <td><strong><span class="amount" x-text="rupiah($store.cart.total)"></span></strong>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
                                     </table>
-                            </div>
-                            <div class="row justify-content-end">
-                                <div class="col-md" >
-                                        <div class="cart-page-total">
-                                        <h2>Cart totals</h2>
-                                        <ul class="mb-20">
-                                            <li>Total <span x-text="rupiah($store.cart.total)"></span></li>
-                                        </ul>
-                                        <!-- <form action=""> -->
-                                        <a class="chekoutButton disabled" id="chekoutBtn" type="submit">Proceed to checkout</a>
-                                        <!-- </form> -->
+                                </div>
+
+                                <!-- <div class="payment-method">
+                                    <div class="accordion" id="checkoutAccordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="checkoutOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#bankOne" aria-expanded="true" aria-controls="bankOne">
+                                            Direct Bank Transfer
+                                            </button>
+                                        </h2>
+                                        <div id="bankOne" class="accordion-collapse collapse show" aria-labelledby="checkoutOne" data-bs-parent="#checkoutAccordion">
+                                            <div class="accordion-body">
+                                             <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+                                            </div>
                                         </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="paymentTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#payment" aria-expanded="false" aria-controls="payment">
+                                            Cheque Payment
+                                            </button>
+                                        </h2>
+                                        <div id="payment" class="accordion-collapse collapse" aria-labelledby="paymentTwo" data-bs-parent="#checkoutAccordion">
+                                            <div class="accordion-body">
+                                            <p>Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="paypalThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#paypal" aria-expanded="false" aria-controls="paypal">
+                                            PayPal
+                                            </button>
+                                        </h2>
+                                        <div id="paypal" class="accordion-collapse collapse" aria-labelledby="paypalThree" data-bs-parent="#checkoutAccordion">
+                                            <div class="accordion-body">
+                                                <p>Pay via PayPal; you can pay with your credit card if you don’t have a
+                                                PayPal account.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div> -->
+                                <div class="order-button-payment mt-20">
+                                <button class="chekoutButton" onclick="order()" class="tp-btn-h1">Place order</button>
                                 </div>
                             </div>
+                        </div>
                     </div>
-                <!-- </form> -->
-            </div>
+                </form>
             </div>
         </section>
-        <!-- cart-area-end -->
+        <!-- checkout-area-end -->
 
         <!-- cta-area-start -->
         <section class="cta-area d-ldark-bg pt-55 pb-10">

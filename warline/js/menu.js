@@ -20,7 +20,7 @@ document.addEventListener('alpine:init', () =>{
             //cek apakah itemnya ada di cart atau kosong
             const cartItem = this.items.find((item) => item.id === newItem.id);
             $('#chekoutBtn').removeClass('disabled')
-            $('#chekoutBtn').attr('href', 'pembayaran.html')
+            $('#chekoutBtn').attr('href', 'checkout.html')
 
             
 
@@ -180,7 +180,7 @@ function cek() {
     if (list !== 0){
         chekoutButton.disabled = false;
         chekoutButton.classList.remove('disabled')
-        $('#chekoutBtn').attr('href', 'pembayaran.html')
+        $('#chekoutBtn').attr('href', 'checkout.html')
     } else {
         return false
     }
@@ -192,24 +192,61 @@ function hapus() {
     let pesanan = JSON.parse(localStorage.getItem("pesanan"))?JSON.parse(localStorage.getItem("pesanan")):[];
     let total = JSON.parse(localStorage.getItem("total"))?JSON.parse(localStorage.getItem("total")):0;
     let quantity = JSON.parse(localStorage.getItem("quantity"))?JSON.parse(localStorage.getItem("quantity")):0;
-    let orderan = JSON.parse(localStorage.getItem("orderan"))?JSON.parse(localStorage.getItem("orderan")):[];
-
-    if (orderan.length === 0) { 
-        // alert('asasas')
-        // orderan.push(...orderan, pesanan);
-        // orderan = localStorage.setItem("orderan",JSON.stringify(orderan));
-        if (pesanan && total && quantity) {
-            localStorage.removeItem("pesanan", JSON.stringify(pesanan))
-            localStorage.removeItem("total", JSON.stringify(total))
-            localStorage.removeItem("quantity", JSON.stringify(quantity))
-        }}
+    if (pesanan && total && quantity) {
+        localStorage.removeItem("pesanan", JSON.stringify(pesanan))
+        localStorage.removeItem("total", JSON.stringify(total))
+        localStorage.removeItem("quantity", JSON.stringify(quantity))
+    }
 
 }
 // orderan = localStorage.setItem("orderan",JSON.stringify(pesanan,total,quantity));
 
+//ngirim data pemesan
+function order() {
+    let username = document.getElementById("username").value;
+    let address = document.getElementById("address").value;
+    let number = document.getElementById("number").value;
+    const orderan = JSON.parse(localStorage.getItem("orderan"))?JSON.parse(localStorage.getItem("orderan")):[];
+    const pesanan = JSON.parse(localStorage.getItem("pesanan", "total", "quantity"))?JSON.parse(localStorage.getItem("pesanan", "total", "quantity")):[];
+    pesananStr = JSON.stringify(pesanan)
+    
+        //untuk tanggal
+        const date = new Date();
+        dateStr = date.getDate() + "-" + (date.getMonth()+1) + "-" + date.getFullYear() + "  pukul:" + date.getHours() + "." + date.getMinutes();
+        //kalo username ada isinya
+        if(username != "" && address != '' && number != ""){
+            for (let i= 0; i < pesanan.length; i++){
+                //push ke orderan
+                orderan.push({
+                    "nama": username,
+                    "alamat": address,
+                    "kontak": number,
+                    "tanggal": dateStr,
+                    "pesanan": [pesanan[i].name + " jumlah " + pesanan[i].quantity ]
+                
+            })}
+            // if (orderan.value === username.value){
+            //     confirm("apakah anda ingin memesan lagi?")
+            //     localStorage.setItem("orderan", JSON.stringify(orderan));
+            //     hapus()
+            //     window.open("pembayaran.html")
+            // } else{
+                localStorage.setItem("orderan", JSON.stringify(orderan));
+                hapus()
+                window.open("pembayaran.html")
+            // }
+        }else{
+            alert("masukan data dengan benar")
+        }
 
+    
+}
 
 cek()
+
+//pindah halaman sekalian hapus data
+
+
 
 // function cek() {
     //     let items = JSON.parse(localStorage.getItem("pesanan"))?JSON.parse(localStorage.getItem("pesanan")):[]    
