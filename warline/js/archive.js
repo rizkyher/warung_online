@@ -1,7 +1,8 @@
 //untuk memunculkan data di archive
 function show_data(){
     // alert('data akan di tampilkan')
-    let tambah_data = JSON.parse(localStorage.getItem("orderan"));
+    let tambah_data = JSON.parse(localStorage.getItem("orderan"))
+    // tambah_data.forEach(d => d.pesanan);
     if (typeof tambah_data !== 'undefined'){
         jQuery(`.data`).remove()
         for (let i= 0; i < tambah_data.length; i++){
@@ -17,4 +18,7 @@ function show_data(){
         }
     }
 }
+
+
+
 show_data()
